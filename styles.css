@@ -1,0 +1,87 @@
+:root{
+  --bg:#0f1724;
+  --panel:#111827;
+  --muted:#9ca3af;
+  --accent-1:#6d28d9;
+  --accent-2:#3b82f6;
+  --green:#16a34a;
+  --yellow:#d97706;
+  --gray:#374151;
+  --card-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#041025 0%, #071127 50%, #02111b 100%);
+  color:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:24px;
+}
+
+/* App container */
+.app-container{max-width:1100px;margin:0 auto}
+
+/* Header */
+.header{margin-bottom:18px;text-align:center}
+.title-block{display:flex;align-items:center;justify-content:center;gap:12px}
+.trophy{width:44px;height:44px;color:#facc15}
+h1{font-size:40px;margin:0;background:linear-gradient(90deg,#facc15,#f97316,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:var(--muted);margin-top:6px}
+
+/* Card */
+.card{
+  background:linear-gradient(180deg, rgba(17,24,39,0.9), rgba(15,23,42,0.85));
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:16px;
+  border:1px solid rgba(255,255,255,0.04);
+  box-shadow:var(--card-shadow);
+}
+
+/* Controls */
+.controls-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.left-controls{display:flex;gap:10px;align-items:center}
+.right-controls{display:flex;align-items:center;gap:12px}
+.btn{padding:10px 16px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+.btn-green{background:linear-gradient(90deg,#10b981,#059669)}
+.btn-yellow{background:linear-gradient(90deg,#f59e0b,#d97706)}
+.btn-gray{background:linear-gradient(90deg,#374151,#1f2937)}
+.btn:active{transform:translateY(1px)}
+
+/* Hidden util */
+.hidden{display:none}
+
+/* Laps input */
+.laps-label{display:flex;align-items:center;gap:8px;color:var(--muted);font-weight:600}
+.laps-label input{width:72px;padding:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:#0b1220;color:#fff}
+
+/* Time display */
+.time-display{background:#0b1220;padding:8px 12px;border-radius:8px;font-family:monospace;font-size:18px;color:#fff;border:1px solid rgba(255,255,255,0.03)}
+
+/* Status banner */
+.status-banner{padding:12px;border-radius:10px;background:linear-gradient(90deg,#f59e0b,#f97316);color:#1f2937;font-weight:700;text-align:center;margin-bottom:12px}
+
+/* Leaderboard table */
+.table-wrap{overflow-x:auto}
+.table{width:100%;border-collapse:collapse;font-size:14px}
+.table thead th{padding:12px 10px;text-align:left;color:var(--muted);border-bottom:1px solid rgba(255,255,255,0.04)}
+.table tbody td{padding:12px 10px;border-top:1px solid rgba(255,255,255,0.03);vertical-align:middle}
+.center{text-align:center}.right{text-align:right}
+
+/* Driver cell */
+.driver-cell{display:flex;align-items:center;gap:10px}
+.driver-dot{width:12px;height:12px;border-radius:50%}
+
+/* Energy bar */
+.energy-bar{width:120px;height:10px;background:#0b1220;border-radius:999px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+.energy-fill{height:100%;background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981);transition:width 0.15s linear}
+
+/* small text */
+.small{font-size:12px;color:var(--muted)}
+
+/* Footer */
+.footer{text-align:center;margin-top:10px;color:var(--muted);font-size:13px}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Apex Arena</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="header-inner">
+        <div class="title-block">
+          <svg class="trophy" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2h8l1 4h2v2a4 4 0 01-4 4h-1v3a3 3 0 01-3 3h-2a3 3 0 01-3-3v-3H6a4 4 0 01-4-4V6h2l1-4z" fill="currentColor"/></svg>
+          <h1>Apex Arena</h1>
+        </div>
+        <p class="subtitle">Competitive Racing Simulation Platform</p>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="controls card">
+        <div class="controls-row">
+          <div class="left-controls">
+            <button id="startBtn" class="btn btn-green">
+              ▶ Start Race
+            </button>
+            <button id="pauseBtn" class="btn btn-yellow hidden">
+              ⏸ Pause
+            </button>
+            <button id="resetBtn" class="btn btn-gray">
+              ↺ Reset
+            </button>
+          </div>
+
+          <div class="right-controls">
+            <label class="laps-label">
+              🏁 Laps:
+              <input id="lapsInput" type="number" min="1" max="50" value="10" />
+            </label>
+
+            <div id="timeDisplay" class="time-display">0:0.0</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="statusBanner" class="status-banner hidden">
+        <div>🏆 Race Complete!</div>
+      </section>
+
+      <section class="leaderboard card">
+        <div class="card-header">
+          <h2>Live Leaderboard</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table id="leaderboardTable" class="table">
+            <thead>
+              <tr>
+                <th>Pos</th>
+                <th>Driver</th>
+                <th class="center">Laps</th>
+                <th class="center">Status</th>
+                <th class="right">Speed</th>
+                <th class="right">Energy</th>
+                <th class="right">Best Lap</th>
+                <th class="right">Gap</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody">
+              <!-- rows injected here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p id="footerText"></p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
